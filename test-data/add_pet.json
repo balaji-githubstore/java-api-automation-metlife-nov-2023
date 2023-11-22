@@ -1,0 +1,24 @@
+{
+  "id": 692,
+
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+
+  "name": "doggie-692",
+
+  "photoUrls": [
+    "http://googl.com/hello.png",
+    "jack"
+  ],
+
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+
+  "status": "available"
+}
