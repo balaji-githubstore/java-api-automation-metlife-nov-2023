@@ -3,6 +3,7 @@ package com.metlife.test;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.metlife.utils.TokenUtlis;
 import io.restassured.RestAssured;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -19,7 +20,7 @@ public class Demo5GetPetStoreTest {
         String resource="/pet/"+petId;
 
         String response =RestAssured
-                .given()
+                .given().header("Authorization","Bearer "+ TokenUtlis.getAuthToken(82))
                 .when().get(endPoint+resource)
                 .then().statusCode(200).extract().asString();
 
